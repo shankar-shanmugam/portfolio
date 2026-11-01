@@ -2,6 +2,10 @@
 
 ASP.NET Core Razor Pages portfolio for Backend .NET Developer roles.
 
+**Live site:** https://shankar-portfolio-pbxc.onrender.com
+
+The free host sleeps after about 15 minutes with no visitors. The first open after that can take up to a minute.
+
 ## Run locally
 
 ```powershell
