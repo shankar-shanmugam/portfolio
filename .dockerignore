@@ -1,0 +1,7 @@
+bin/
+obj/
+.git/
+.gitignore
+App_Data/contact-messages/*.json
+*.user
+*.md
