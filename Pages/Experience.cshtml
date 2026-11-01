@@ -1,0 +1,39 @@
+@page
+@model ExperienceModel
+@{
+    ViewData["Title"] = "Experience";
+}
+
+<section class="page-hero">
+    <div class="shell">
+        <p class="eyebrow">Professional experience</p>
+        <h1>Backend work on a live insurance ERP</h1>
+    </div>
+</section>
+
+<section class="section">
+    <div class="shell narrow">
+        <article class="job">
+            <header class="job-header">
+                <h2>Acess Meditech Private Limited</h2>
+                <p class="job-role">.NET Full Stack Developer · February 2025 – Present</p>
+                <p class="job-meta">Project: Enterprise Insurance ERP – Non-Motor Claims · Domain: Insurance · Market: Saudi Arabia</p>
+            </header>
+            <ul class="work-list">
+                <li>Develop and maintain REST APIs and service-layer business logic in C# and ASP.NET Core for claims workflows, including claim estimation, reserve validation and claim settlement.</li>
+                <li>Work on complex authority-matrix rules that drive business authorization and approval workflows for claims.</li>
+                <li>Contributed to improving the responsiveness of the claims dashboard, which slowed down with large volumes of records, by optimizing the DataTables configuration and implementing pagination and asynchronous data loading so that data is fetched and rendered in smaller pages.</li>
+                <li>Implemented transaction-scoped processing with TransactionScope for payment-term workflows that interact with other modules such as Reinsurance (RI), so related updates within the scope are committed or rolled back together, reducing the risk of partial updates.</li>
+                <li>Develop and modify SQL Server stored procedures and triggers for claims data operations, and troubleshoot slow queries through indexing and query optimization.</li>
+                <li>Work on Quartz-based scheduled jobs, Windows services and SQL Server Agent jobs that run background processing at configured times, including daily jobs.</li>
+                <li>Implement and maintain document upload and download functionality, along with backend services for email and SMS notifications.</li>
+                <li>Develop and maintain production reports for the Non-Motor Claims department.</li>
+                <li>Integrate external middleware APIs with backend services, and debug issues across APIs, services and database operations as part of production support.</li>
+                <li>Contribute to the ongoing modernization of legacy application code toward an API-based architecture on .NET 10 / ASP.NET Core 10, and take part in code reviews and team-based development using TFS.</li>
+            </ul>
+            <p class="inline-links">
+                <a asp-page="/CaseStudy">Read the Non-Motor Claims case study →</a>
+            </p>
+        </article>
+    </div>
+</section>

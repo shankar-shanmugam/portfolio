@@ -1,0 +1,79 @@
+@page
+@model CaseStudyModel
+@{
+    ViewData["Title"] = "Case Study";
+}
+
+<section class="page-hero">
+    <div class="shell">
+        <p class="eyebrow">Case study</p>
+        <h1>Enterprise Insurance ERP — Non-Motor Claims</h1>
+        <p class="page-lead">Backend contributions on a claims module used by Saudi clients, within a large insurance ERP undergoing modernization toward an API-based architecture on .NET 10 / ASP.NET Core 10.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="shell narrow prose">
+        <h2>Context</h2>
+        <p>
+            The system is a large-scale enterprise insurance ERP serving the Saudi Arabian market.
+            I work in the Non-Motor Claims department as a .NET Full Stack Developer at Acess Meditech Private Limited,
+            with the strongest focus on backend APIs, service-layer logic and SQL Server.
+        </p>
+        <p>
+            The application is undergoing legacy modernization toward .NET 10 / ASP.NET Core 10.
+            That migration is ongoing — not every production module runs on .NET 10 today.
+            My work is development and maintenance inside that modernization effort, not a solo redesign of the entire platform.
+        </p>
+
+        <h2>Problem areas I touch</h2>
+        <ul>
+            <li>Claims workflows: estimation, reserve validation and settlement</li>
+            <li>Dashboard responsiveness when large volumes of records are loaded</li>
+            <li>Payment-term processing that spans related modules such as Reinsurance (RI)</li>
+            <li>Scheduled background processing, documents, notifications and production reports</li>
+            <li>Authority-matrix rules for business authorization and approvals</li>
+        </ul>
+
+        <h2>Dashboard performance</h2>
+        <p>
+            The claims dashboard can slow down when handling large volumes of records.
+            I contributed to improving responsiveness by optimizing the DataTables configuration and implementing
+            pagination and asynchronous data loading, so data is fetched and rendered in smaller pages.
+            This was a practical performance improvement on an existing screen — not a full dashboard redesign —
+            and no invented response-time metrics are claimed here.
+        </p>
+
+        <h2>Cross-module payment processing</h2>
+        <p>
+            Payment-term workflows interact with other modules, including Reinsurance (RI).
+            I implemented transaction-scoped processing with <code>TransactionScope</code> so related updates
+            within the scope are committed or rolled back together, reducing the risk of partial updates.
+            This describes transactional consistency for the operations enclosed in that scope.
+            It does not claim that every operation across independent systems is guaranteed to be atomic.
+        </p>
+
+        <h2>Other backend responsibilities</h2>
+        <ul>
+            <li>REST APIs and service-layer business logic for claims flows</li>
+            <li>SQL Server stored procedures, triggers, indexing and query troubleshooting</li>
+            <li>Quartz-based scheduled jobs, Windows services and SQL Server Agent jobs for timed processing</li>
+            <li>Document upload and download, plus email and SMS notification services</li>
+            <li>Production reports for Non-Motor Claims</li>
+            <li>External middleware API integration and production support debugging</li>
+            <li>Authority-matrix business authorization rules</li>
+        </ul>
+
+        <h2>Stack in this project</h2>
+        <p>
+            C#, .NET / ASP.NET Core, REST APIs, Microsoft SQL Server, TransactionScope,
+            Quartz-based jobs, Windows services, Visual Studio, TFS, Postman,
+            with working knowledge of HTML, CSS, JavaScript, jQuery, Knockout.js and DataTables on the UI side.
+        </p>
+
+        <p class="inline-links">
+            <a asp-page="/Experience">See the full experience list →</a>
+            <a asp-page="/Contact">Discuss a role →</a>
+        </p>
+    </div>
+</section>

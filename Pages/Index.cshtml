@@ -1,0 +1,102 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section id="about" class="block">
+    <h2><span>01.</span> About</h2>
+    <p>
+        Backend-focused .NET developer on the Non-Motor Claims module of an enterprise insurance ERP
+        for the Saudi Arabian market. I work in C# and ASP.NET Core: REST APIs, service-layer logic,
+        SQL Server stored procedures, triggers and transactions.
+    </p>
+    <p>
+        Recent work includes claims dashboard performance improvements and cross-module payment processing
+        with TransactionScope, while the application moves toward .NET 10 / ASP.NET Core 10.
+    </p>
+    <ul class="pills" aria-label="Core skills">
+        <li>C#</li>
+        <li>ASP.NET Core</li>
+        <li>REST APIs</li>
+        <li>SQL Server</li>
+        <li>T-SQL</li>
+        <li>TransactionScope</li>
+        <li>Quartz jobs</li>
+        <li>Windows services</li>
+        <li>TFS</li>
+        <li>Git</li>
+    </ul>
+    <p class="more"><a asp-page="/About">Education, training and availability</a></p>
+</section>
+
+<section id="experience" class="block">
+    <h2><span>02.</span> Experience</h2>
+
+    <article class="entry">
+        <p class="when">2025 — Present</p>
+        <div>
+            <h3>.NET Full Stack Developer · Acess Meditech Private Limited</h3>
+            <p class="entry-meta">Enterprise Insurance ERP — Non-Motor Claims · Saudi Arabia</p>
+            <ul>
+                <li>Develop and maintain REST APIs and service-layer logic for claim estimation, reserve validation and settlement.</li>
+                <li>Contributed to dashboard responsiveness on large record sets with DataTables configuration, pagination and asynchronous loading.</li>
+                <li>Implemented TransactionScope for payment-term workflows that touch modules such as Reinsurance, so related updates commit or roll back together.</li>
+                <li>Build stored procedures and triggers, Quartz-based jobs, document upload/download, email and SMS services, and production reports.</li>
+            </ul>
+            <ul class="pills">
+                <li>C#</li>
+                <li>ASP.NET Core</li>
+                <li>SQL Server</li>
+                <li>TransactionScope</li>
+                <li>Quartz</li>
+            </ul>
+        </div>
+    </article>
+    <p class="more"><a asp-page="/Experience">Full experience list</a></p>
+</section>
+
+<section id="work" class="block">
+    <h2><span>03.</span> Work</h2>
+
+    <a class="project" asp-page="/CaseStudy">
+        <div>
+            <p class="project-kicker">Featured · Professional</p>
+            <h3>Non-Motor Claims ERP</h3>
+            <p>Backend work on a live insurance claims module used by Saudi clients: APIs, dashboard performance, transactional payments, scheduled jobs and reports. Modernization toward .NET 10 is ongoing.</p>
+            <ul class="pills">
+                <li>C#</li>
+                <li>ASP.NET Core</li>
+                <li>SQL Server</li>
+                <li>TransactionScope</li>
+            </ul>
+        </div>
+    </a>
+
+    <a class="project" asp-page="/Projects">
+        <div>
+            <p class="project-kicker">Personal · Self-work</p>
+            <h3>Car Service Management</h3>
+            <p>Practice REST API for users, carts, services and bookings, with JWT authentication and role-based endpoint security. Not professional employment.</p>
+            <ul class="pills">
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>Spring Security</li>
+                <li>MySQL</li>
+            </ul>
+        </div>
+    </a>
+</section>
+
+<section id="contact" class="block contact-close">
+    <h2><span>04.</span> Contact</h2>
+    <p class="contact-lead">Currently employed, and open to .NET Developer and Backend .NET roles in Coimbatore, Chennai and Bangalore.</p>
+    <p>
+        <a href="mailto:shankar89479@gmail.com">shankar89479@gmail.com</a><br />
+        <a href="tel:+916380389479">+91 6380389479</a>
+    </p>
+    <p class="more">
+        <a class="btn" asp-page="/Contact">Send a message</a>
+        <a href="~/resume/Shankar-S-Resume.pdf" download>Download resume</a>
+    </p>
+</section>

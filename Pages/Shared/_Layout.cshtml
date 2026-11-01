@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@(ViewData["Title"] != null ? $"{ViewData["Title"]} · " : "")Shankar S · Backend .NET Developer</title>
+    <meta name="description" content="Portfolio of Shankar S — Backend-focused .NET Developer working on enterprise insurance ERP Non-Motor Claims systems." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    @{
+        var page = ViewContext.RouteData.Values["page"]?.ToString() ?? "";
+        var isHome = page.Equals("/Index", StringComparison.OrdinalIgnoreCase);
+    }
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="app">
+        <header class="rail" id="site-rail">
+            <div class="rail-top">
+                <a class="brand" asp-page="/Index">Shankar S</a>
+                <p class="brand-role">Backend .NET Developer</p>
+                <p class="brand-line">I build and maintain APIs, SQL workflows and claims services for an enterprise insurance ERP used by Saudi clients.</p>
+
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+                    <span class="sr-only">Menu</span>
+                    Menu
+                </button>
+
+                <nav class="rail-nav" id="site-nav" aria-label="Primary" data-nav>
+                    @if (isHome)
+                    {
+                        <a href="#about"><span>01</span> About</a>
+                        <a href="#experience"><span>02</span> Experience</a>
+                        <a href="#work"><span>03</span> Work</a>
+                        <a href="#contact"><span>04</span> Contact</a>
+                    }
+                    else
+                    {
+                        <a asp-page="/About"><span>01</span> About</a>
+                        <a asp-page="/Experience"><span>02</span> Experience</a>
+                        <a asp-page="/CaseStudy"><span>03</span> Case Study</a>
+                        <a asp-page="/Projects"><span>04</span> Projects</a>
+                        <a asp-page="/Contact"><span>05</span> Contact</a>
+                    }
+                </nav>
+            </div>
+
+            <div class="rail-bottom">
+                <p class="rail-meta">Open to Coimbatore, Chennai, Bangalore</p>
+                <p class="rail-meta">Currently employed · Open to opportunities</p>
+                <div class="rail-links">
+                    <a href="https://github.com/shankar-shanmugam" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/shankar-s-147b31232" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:shankar89479@gmail.com">Email</a>
+                    <a href="~/resume/Shankar-S-Resume.pdf" download>Resume</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="stage">
+            <main id="main">
+                @RenderBody()
+            </main>
+            <footer class="stage-foot">
+                <p>&copy; @DateTime.Now.Year Shankar S</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

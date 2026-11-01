@@ -1,0 +1,48 @@
+@page
+@model ProjectsModel
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<section class="page-hero">
+    <div class="shell">
+        <p class="eyebrow">Projects</p>
+        <h1>Professional and personal work</h1>
+        <p class="page-lead">Primary focus is current .NET work. Earlier Java training and a personal project show transferable backend skills only.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="shell narrow">
+        <article class="project-block">
+            <p class="tag">Professional · Current</p>
+            <h2>Enterprise Insurance ERP — Non-Motor Claims</h2>
+            <p>
+                Live insurance ERP module used by Saudi clients. Backend APIs, SQL Server, transactional payment flows,
+                scheduled jobs, documents, notifications and production reports. See the
+                <a asp-page="/CaseStudy">case study</a> for detail.
+            </p>
+            <p class="tech">C# · ASP.NET Core · SQL Server · TransactionScope · Quartz-based jobs · TFS</p>
+        </article>
+
+        <article class="project-block">
+            <p class="tag">Personal project · Self-work</p>
+            <h2>Car Service Management</h2>
+            <p>
+                Built a REST API for managing users, service carts, car services and bookings, with JPA entity relationships,
+                JWT-based authentication, role-based endpoint security and global exception handling.
+                This is practice work — not professional employment.
+            </p>
+            <p class="tech">Java 8 · Spring Boot · Spring Data JPA · Spring Security · MySQL</p>
+        </article>
+
+        <aside class="note-block">
+            <h2>Training background</h2>
+            <p>
+                Java Full Stack training at JSpiders and an internship at NTT DATA Services provided earlier exposure
+                to Java, Spring and web fundamentals. They are listed on the
+                <a asp-page="/About">About</a> page and are not presented as professional .NET employment.
+            </p>
+        </aside>
+    </div>
+</section>
